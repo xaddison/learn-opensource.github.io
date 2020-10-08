@@ -7,8 +7,6 @@
     <title>Learn Opensource</title>
     <link rel="shortcut icon" href="./img/logo.png" type="image/png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link
-        href="https://fonts.googhttps://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.cssleapis.com/css2?family=Montserrat:wght@300&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -38,10 +36,12 @@
                         Helping and building community of developers & student who are interested in
                         contributing and learning OpenSource.
                     </p>
-                    <button
-                        class="btn btn-primary text-decoration-none btn-link px-5 py-3 mt-3 rounded-0 border-0 text-white bg-main">
-                        Start Contributing
-                    </button>
+                    <a href="https://github.com/learn-opensource" target="_blank">
+                        <button
+                            class="btn btn-primary shadow text-decoration-none btn-link px-5 py-3 mt-3 rounded-0 border-0 text-white bg-main">
+                            Start Contributing
+                        </button>
+                    </a>
                 </div>
                 <div class="col-sm-12 col-md-5">
                     <img class="img-fluid d-none d-md-block" src="./img/banner.svg">
@@ -56,8 +56,15 @@
             </path>
         </svg>
     </div>
-    <!--main content here!!-->
+    <!---->
 
+    <!--projects will be added using js-->
+    <div class="container">
+        <h1 class="my-3 text-muted">Projects</h1>
+        <div id="projects" class=" row"> </div>
+    </div>
+
+    <!---->
     <div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#694ea1" fill-opacity="1"
@@ -66,13 +73,17 @@
         </svg>
     </div>
     <footer class="py-5 bg-main text-center text-white">
-        <p>Made with <i class="fa fa-heart text-danger"></i> by <a href="http://sachinduhan.me/"
-                class="text-white text-decoration-none" target="_blank">Sachin Duhan</a></p>
+        <p>
+            Made with <i class="fa fa-heart text-danger"></i> by
+            <a href="http://sachinduhan.me/" class="text-white text-decoration-none" target="_blank">Sachin Duhan</a>
+        </p>
     </footer>
+    <script src="https://kit.fontawesome.com/a3f929b7cc.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
     </script>
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
