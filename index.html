@@ -16,8 +16,8 @@
         <nav class="navbar navbar-expand-lg static-top shadow bg-white">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="./img/logo.png" height="40" width="auto"> <span class="ml-3 text-dark">Learn
-                        Opensource</span>
+                    <img src="./img/logo.png" height="40" width="auto">
+                    <span class="ml-3 text-dark">Learn Opensource</span>
                 </a>
                 <a href="https://github.com/learn-opensource" class="text-dark" target="_blank">
                     <i class="fa fa-github fa-2x"></i>
@@ -31,7 +31,7 @@
                         <span class="text-main font-weight-bold">L</span>earn
                         <span class="text-main font-weight-bold">O</span>penSource
                     </h1>
-                    <h4 class="my-3">Encouraging innovation through collaboration</h4>
+                    <h4 class="my-3 display-5">Encouraging innovation through collaboration</h4>
                     <p class="lead font-weight-light">
                         Helping and building community of developers & student who are interested in
                         contributing and learning OpenSource.
@@ -39,7 +39,7 @@
                     <a href="https://github.com/learn-opensource" target="_blank">
                         <button
                             class="btn btn-primary shadow text-decoration-none btn-link px-5 py-3 mt-3 rounded-0 border-0 text-white bg-main">
-                            Start Contributing
+                            Start Contributing <i class="fa fa-chevron-right pl-3"></i>
                         </button>
                     </a>
                 </div>
@@ -58,25 +58,45 @@
     </div>
     <!---->
 
-    <!--projects will be added using js-->
     <div class="container">
         <h1 class="my-3 text-muted">Projects</h1>
-        <div id="projects" class=" row"> </div>
+        <div id="projects" class="row">
+            <!--projects will be added using fetch from main.js file-->
+            <!--template only!!-->
+            <!--uncomment this to view the projects div & paste the updated look in main.js file!-->
+            <!-- <div class="col-sm-12 col-md-4 p-2">
+                <div class="rounded border border-dark p-3">
+                    <h5 class="text-dark">
+                        <a href="${link}" class="text-main">
+                            <strong>${name}</strong>
+                        </a>
+                    </h5>
+                    <p class="text-muted">${description}</p>
+                    <div class="d-flex align-items-between">
+                        <div class="mx-2"><i class="fa fa-star text-muted"></i> ${stars}</div>
+                        <div class="mx-2"><i class="fa fa-code-branch text-muted"></i> ${forks}</div>
+                    </div>
+                </div>
+            </div> -->
+            <!--end othe template-->
+        </div>
     </div>
 
-    <!---->
-    <div>
+
+    <footer>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#694ea1" fill-opacity="1"
                 d="M0,96L48,90.7C96,85,192,75,288,112C384,149,480,235,576,256C672,277,768,235,864,186.7C960,139,1056,85,1152,80C1248,75,1344,117,1392,138.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
             </path>
         </svg>
-    </div>
-    <footer class="py-5 bg-main text-center text-white">
-        <p>
-            Made with <i class="fa fa-heart text-danger"></i> by
-            <a href="http://sachinduhan.me/" class="text-white text-decoration-none" target="_blank">Sachin Duhan</a>
-        </p>
+        <div class="py-5 bg-main text-center text-white">
+            <!--main content of footer-->
+            <p>
+                Made with <i class="fa fa-heart text-danger"></i> by
+                <a href="http://sachinduhan.me/" class="text-white text-decoration-none" target="_blank">Sachin
+                    Duhan</a>
+            </p>
+        </div>
     </footer>
     <script src="https://kit.fontawesome.com/a3f929b7cc.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

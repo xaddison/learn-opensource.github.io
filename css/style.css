@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 html,
 body {
-
-    font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     height: 100%;
     width: 100%;
@@ -15,6 +15,10 @@ body {
     box-sizing: border-box;
 }
 
+a, p, .display-6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .text-main {
     color: #694ea1
 }
@@ -23,7 +27,7 @@ body {
     background-color: #694ea1;
 }
 
-.bg-main:hover {
+.bg-main:hover, .bg-main:active, .bg-main:focus {
     background-color: #694ea1;
 }
 
