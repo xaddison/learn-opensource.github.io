@@ -9,7 +9,7 @@ const get=async (url) => {
 };
 
 const htmlProjectCard=(link, name, description, stars, forks) => {
-    return `<div class="col-sm-12 col-md-4 p-2">
+    return `<div class="col-sm-12 col-md-4 p-2" data-aos="zoom-in" data-aos-delay="200">
                 <div class="rounded border border-dark p-3">
                     <h5 class="text-dark">
                         <a href="${link}" class="text-main">
