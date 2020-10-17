@@ -26,8 +26,10 @@ $ cd learn-opensource.github.io
 ## API Reference
 - [GITHUB_API](https://developer.github.com/v3/) :lion:
 
-## Contributors
-- [SACHIN_DUHAN](https://github.com/sachin-duhan26) :bearded_person:
+### Maintainers
+1. [Sachin Duhan](https://github.com/sachin-duhan26) :bearded_person:
+
+### Contributors
 - [Jec Castaños](https://github.com/jscastanos)
 - [Vansh Bhardwaj](https://github.com/vansh1999)
 
