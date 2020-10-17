@@ -15,7 +15,13 @@ body {
     box-sizing: border-box;
 }
 
-a, p, .display-6 {
+a,
+p,
+.display-6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.display-light {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -27,7 +33,9 @@ a, p, .display-6 {
     background-color: #694ea1;
 }
 
-.bg-main:hover, .bg-main:active, .bg-main:focus {
+.bg-main:hover,
+.bg-main:active,
+.bg-main:focus {
     background-color: #694ea1;
 }
 
