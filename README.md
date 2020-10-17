@@ -32,6 +32,7 @@ $ cd learn-opensource.github.io
 ### Contributors
 - [Jec Castaños](https://github.com/jscastanos)
 - [Vansh Bhardwaj](https://github.com/vansh1999)
+- [leodeleone](https://github.com/leodeleone)
 
 ## License
 MIT © [learn-opensource](LICENSE)
