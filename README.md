@@ -28,6 +28,8 @@ $ cd learn-opensource.github.io
 
 ## Contributors
 - [SACHIN_DUHAN](https://github.com/sachin-duhan26) :bearded_person:
+- [Jec Castaños](https://github.com/jscastanos)
+- [Vansh Bhardwaj](https://github.com/vansh1999)
 
 ## License
 MIT © [learn-opensource](LICENSE)
