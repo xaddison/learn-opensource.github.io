@@ -8,7 +8,7 @@ window.document.write(`
         </p>
         <div class="row mt-2">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                <div class="px-5 py-3 m-2 shadow rounded-lg">
+                <div class="px-3 px-md-5 py-3 m-2 shadow rounded-lg">
                     <div class="icon mb-2">
                         <img src="./img/benefits/web-coding.svg" height="65" width="auto" class="center">
                     </div>
@@ -21,7 +21,7 @@ window.document.write(`
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
                 data-aos-delay="200">
-                <div class="px-5 py-3 m-2 shadow rounded-lg">
+                <div class="px-3 px-md-5 py-3 m-2 shadow rounded-lg">
                     <div class="icon mb-2">
                         <img src="./img/benefits/pay.svg" height="65" width="auto" class="center">
                     </div>
@@ -34,7 +34,7 @@ window.document.write(`
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
                 data-aos-delay="300">
-                <div class="px-5 py-3 m-2 shadow rounded-lg">
+                <div class="px-3 px-md-5 py-3 m-2 shadow rounded-lg">
                     <div class="icon mb-2">
                         <img src="./img/benefits/communication.svg" height="65" width="auto" class="center">
                     </div>
@@ -49,7 +49,7 @@ window.document.write(`
             </div>
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="px-5 py-3 m-2 shadow rounded-lg">
+                <div class="px-3 px-md-5 py-3 m-2 shadow rounded-lg">
                     <div class="icon mb-2">
                         <img src="./img/benefits/reputation.svg" height="65" width="auto" class="center">
                     </div>
@@ -65,7 +65,7 @@ window.document.write(`
 
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="px-5 py-3 m-2 shadow rounded-lg">
+                <div class="px-3 px-md-5 py-3 m-2 shadow rounded-lg">
                     <div class="icon mb-2">
                         <img src="./img/benefits/transparent.svg" height="65" width="auto" class="center">
                     </div>
@@ -80,7 +80,7 @@ window.document.write(`
             </div>
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="px-5 py-3 m-2 shadow rounded-lg">
+                <div class="px-3 px-md-5 py-3 m-2 shadow rounded-lg">
                     <div class="icon mb-2">
                         <img src="./img/benefits/fun.svg" height="65" width="auto" class="center">
                     </div>

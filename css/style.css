@@ -3,8 +3,8 @@
 html,
 body {
     scroll-behavior: smooth;
-    width: 100%;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 * {
@@ -39,4 +39,24 @@ p,
 
 .bg-light-main {
     background-color: #6a4ea123;
+}
+
+@media (max-width: 320px) {
+    .display-4 {
+        font-size: 2.7rem;
+    }
+
+    .fa.fa-github {
+        display: none;
+    }
+}
+
+@media (max-width: 270px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .fa.fa-github {
+        display: none;
+    }
 }
