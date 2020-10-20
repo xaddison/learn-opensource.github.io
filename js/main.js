@@ -5,7 +5,15 @@ const organization={
 };
 
 const get=async (url) => {
-    return (await (await fetch(url)).json());
+    const cache = getCachedRepos();
+
+    if(cache !== null) {
+        return cache;
+    } else {
+        const repos = await (await fetch(url)).json();
+        updateRepoCache(repos);
+        return repos;
+    }
 };
 
 const htmlProjectCard=(link, name, description, stars, forks) => {
