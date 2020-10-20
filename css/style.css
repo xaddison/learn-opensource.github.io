@@ -41,6 +41,29 @@ p,
     background-color: #6a4ea123;
 }
 
+.contributor-card-top {	
+    margin-bottom: 20px;	
+}	
+
+.contributor-card .avatar {	
+    width: 50px;	
+    display: inline-block;	
+}	
+
+.contributor-card h5 {	
+    display: inline-block;	
+    vertical-align: text-bottom;	
+}	
+
+.sub-text {	
+    margin-bottom: 1rem;	
+}	
+
+.sub-text p {	
+    font-size: 0.8rem;	
+    margin-bottom: 0.2rem;	
+}
+
 @media (max-width: 320px) {
     .display-4 {
         font-size: 2.7rem;
