@@ -54,83 +54,36 @@
         </svg>
     </div>
 
-    <!--contributors-->	
-    <div class="container mb-5">	
-        <h1 class="my-3 text-muted display-light">Contributors</h1>	
-        <div id="contributors" class="row">	
-            <!--contributors will be added using fetch from main.js file-->	
-            <!--template only!!-->	
-            <!--uncomment this to view the contributors div & paste the updated look in main.js file!-->	
-            <!-- <div class="col-sm-12 col-md-4 p-2" data-aos="zoom-in" data-aos-delay="200">	
-                <div class="rounded border border-dark p-3 contributor-card">	
-                    <div class="contributor-card-top">	
-                        <img src="${contributor.avatar_url}" class="avatar" />	
-                        <h5 class="text-dark">	
-                            <a href="${contributor.html_url}" class="text-main">	
-                                <strong>${contributor.login}</strong>	
-                            </a>	
-                        </h5>	
-                    </div>	
-                    ${bio}	
-                    <div class="sub-text">	
-                        ${location}	
-                        ${company}	
-                    </div>	
-                    <div class="d-flex align-items-between">	
-                        <div class="mx-2">	
-                            <a href="${contributor.repos_url}"><i title="Public Repos" class="fa fa-github text-muted"></i></a> ${contributor.public_repos}	
-                        </div>	
-                        <div class="mx-2"><i title="Contributions" class="fa fa-code-branch text-muted"></i> ${contributor.contributions}</div>	
-                        ${blog}	
-                        ${hireable}	
-                    </div>	
-                </div>	
-            </div> -->	
-            <!--end othe template-->	
-        </div>	
-    </div>	
-    <!--end of contributors-->
-
     <!--projects-->
     <div class="container mb-5">
         <h1 class="my-3 text-muted display-light">Our Projects</h1>
-        <div id="projects" class="row">
-            <!--projects will be added using fetch from main.js file-->
-            <!--template only!!-->
-            <!--uncomment this to view the projects div & paste the updated look in main.js file!-->
-            <!-- <div class="col-sm-12 col-md-4 p-2">
-                <div class="rounded border border-dark p-3">
-                    <h5 class="text-dark">
-                        <a href="${link}" class="text-main">
-                            <strong>${name}</strong>
-                        </a>
-                    </h5>
-                    <p class="text-muted">${description}</p>
-                    <div class="d-flex align-items-between">
-                        <div class="mx-2"><i class="fa fa-star text-muted"></i> ${stars}</div>
-                        <div class="mx-2"><i class="fa fa-code-branch text-muted"></i> ${forks}</div>
-                    </div>
-                </div>
-            </div> -->
-            <!--end othe template-->
-        </div>
+        <div id="projects" class="row"></div>
     </div>
     <!--end of projects-->
 
-    <!--benefits section via script-->
+    <!--contributors-->
+    <div class="container mb-4">
+        <h1 class="my-3 text-muted display-light">Contributors</h1>
+        <marquee behavior="sliding" onmouseover="this.stop();" scrollamount="infinite" onmouseout="this.start();"
+            direction="left" id="contributors" class="d-inline-flex flex-row">
+        </marquee>
+    </div>
+    <!--end of contributors-->
+
+    <!--benefits section via static script-->
     <script src="./js/component/benefits.js"></script>
 
     <!--footer-->
     <script src="./js/component/footer.js"></script>
 
     <!--scripts-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/a3f929b7cc.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
     </script>
-    <script src="./js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="./js/main.js"></script>
     <script>
         AOS.init({
             duration: 700,
