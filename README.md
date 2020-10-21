@@ -33,6 +33,7 @@ $ cd learn-opensource.github.io
 - [Jec Castaños](https://github.com/jscastanos)
 - [Vansh Bhardwaj](https://github.com/vansh1999)
 - [leodeleone](https://github.com/leodeleone)
+- [Ben Brooks](https://github.com/bensbits91)
 
 ## License
 MIT © [learn-opensource](LICENSE)
