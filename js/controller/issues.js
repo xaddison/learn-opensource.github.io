@@ -1,9 +1,5 @@
 import { get, organization } from "../constant.js";
 
-// const organization={
-//     _reposUrl: "https://api.github.com/orgs/learn-opensource/repos",
-// };
-
 const htmlIssuesCard=({
     repository_url: repo,
     title,
