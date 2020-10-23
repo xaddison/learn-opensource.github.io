@@ -34,6 +34,7 @@ $ cd learn-opensource.github.io
 - [Vansh Bhardwaj](https://github.com/vansh1999)
 - [leodeleone](https://github.com/leodeleone)
 - [Ben Brooks](https://github.com/bensbits91)
+- [Utkarsh Srivastava](https://github.com/utkarsh4321)
 
 ## License
 MIT © [learn-opensource](LICENSE)
