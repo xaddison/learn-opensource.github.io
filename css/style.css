@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 :root {
     overflow-x: hidden;
@@ -11,47 +11,124 @@ body {
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 a,
 p,
 .display-6 {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .display-light {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .text-main {
-    color: #694ea1
+  color: #694ea1;
 }
 
 .bg-main {
-    background-color: #694ea1;
+  background-color: #694ea1;
 }
 
 .bg-main:hover,
 .bg-main:active,
 .bg-main:focus {
-    background-color: #694ea1;
+  background-color: #694ea1;
 }
 
 .bg-light-main {
-    background-color: #6a4ea123;
+  background-color: #6a4ea123;
+}
+/* === STYLE for the loader started === */
+
+.loader {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.line {
+  animation: expand 1s ease-in-out infinite;
+  border-radius: 10px;
+  display: inline-block;
+  transform-origin: center center;
+  margin: 0 10px;
+  width: 10px;
+  height: 5rem;
+}
+
+.line:nth-child(1) {
+  background: #694ea1;
+}
+
+.line:nth-child(2) {
+  animation-delay: 180ms;
+  background: #694ea1;
+}
+
+.line:nth-child(3) {
+  animation-delay: 360ms;
+  background: #694ea1;
+}
+
+.line:nth-child(4) {
+  animation-delay: 540ms;
+  background: #694ea1;
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
+  }
+}
+/* === STYLE for the loader end === */
+@media (min-width: 768px) {
+  .col-md-4 {
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+.contributor-card-top {
+  margin-bottom: 20px;
+}
+
+.contributor-card .avatar {
+  width: 50px;
+  display: inline-block;
+}
+
+.contributor-card h5 {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.sub-text {
+  margin-bottom: 1rem;
+}
+
+.sub-text p {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
 }
 
 @media (max-width: 320px) {
-    .display-4 {
-        font-size: 2.7rem;
-    }
+  .display-4 {
+    font-size: 2.7rem;
+  }
 
-    .fa.fa-github {
-        display: none;
-    }
+  .fa.fa-github {
+    display: none;
+  }
 }
 
 @media (max-width: 270px) {
