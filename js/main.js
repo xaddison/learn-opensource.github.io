@@ -3,6 +3,7 @@ import { get_organization_repos } from "./controller/repos.js";
 import { getRepoIssues } from "./controller/issues.js";
 
 const pathName=window.location.pathname;
+// console.log(pathName);
 
 if (pathName==="/issues.html") {
     getRepoIssues();
