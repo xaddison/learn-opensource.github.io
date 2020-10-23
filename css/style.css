@@ -88,7 +88,13 @@ p,
   }
 }
 /* === STYLE for the loader end === */
-
+@media (min-width: 768px) {
+  .col-md-4 {
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
 .contributor-card-top {
   margin-bottom: 20px;
 }

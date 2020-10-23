@@ -1,8 +1,7 @@
 import { get } from "../constant.js";
 
-const repos = {
-  _issuesUrl:
-    "https://api.github.com/repos/learn-opensource/learn-opensource.github.io/issues",
+const organization = {
+  _reposUrl: "https://api.github.com/orgs/learn-opensource/repos",
 };
 // fetching the issues for learn-opensource
 
@@ -14,61 +13,64 @@ const htmlIssuesCard = ({
   body,
   labels,
 }) => {
-  return `
- <div class="card m-3 border-0 shadow col-md-4 p-0">
-          <div
-            class="card-image"
-            style="
-              background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-dark-purple-minimalistic-gradient-banner-background-image_223093.jpg);
-            "
-          >
-            <!-- Content -->
-            <a href="https://github.com/${repo
-              .split("/")
-              .slice(-2)
-              .join("/")}" class="text-decoration-none">
-              <h3 class="card-title p-3 text-white m-0">${repo
-                .split("/")
-                .pop()}</h3>
-            </a>
-          </div>
-          <div class="card-body white">
+  if (url && url.split("/").slice(-2)[0] !== "pull") {
+    return `
+   <div class="col-md-4 m-3 card border-0 shadow p-0">
             <div
-              class="text-white d-flex align-items-center justify-content-between"
+              class="card-image"
+              style="
+                background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-dark-purple-minimalistic-gradient-banner-background-image_223093.jpg);
+              "
             >
-              <h4 class="text-main">
-                <a href=${url}>${title}</a>
-              </h4>
-              <i class="fa fa-comments text-dark"
-                ><span class="pl-3">${comments}</span></i
-              >
+              <!-- Content -->
+              <a href="https://github.com/${
+                repo && repo.split("/").slice(-2).join("/")
+              }" class="text-decoration-none">
+                <h3 class="card-title p-3 text-white m-0">${repo
+                  .split("/")
+                  .pop()}</h3>
+              </a>
             </div>
-            <p class="text-muted" align="justify">
-             ${body.substring(0, Math.min(150, body.length))}
-            </p>
-            <div>
+            <div class="card-body white">
+              <div
+                class="text-white d-flex align-items-center justify-content-between"
+              >
+                <h4 class="text-main">
+                  <a href=${url}>${title}</a>
+                </h4>
+                <i class="fa fa-comments text-dark"
+                  ><span class="pl-3">${comments}</span></i
+                >
+              </div>
+              <p class="text-muted" align="justify">
+               ${body && body.substring(0, Math.min(150, body.length))}
+              </p>
+              <div>
 
-            ${
-              (labels &&
-                labels.length > 0 &&
-                labels
-                  .map(
-                    ({
-                      color,
-                      name,
-                    }) => `<span class="badge badge-pill p-2 m-1" style="background:#${color};color:#fff;"
-            >${name}</span
-          >`
-                  )
-                  .join("")) ||
-              ""
-            }
+              ${
+                (labels &&
+                  labels.length > 0 &&
+                  labels
+                    .map(
+                      ({
+                        color,
+                        name,
+                      }) => `<span class="badge badge-pill p-2 m-1" style="background:#${color};color:#fff;"
+              >${name}</span
+            >`
+                    )
+                    .join("")) ||
+                ""
+              }
 
 
+              </div>
             </div>
           </div>
-        </div>
-`;
+  `;
+  } else {
+    return "";
+  }
 };
 
 // html loader
@@ -99,15 +101,27 @@ export const getRepoIssues = async () => {
 
   htmlLoader();
   try {
-    const issues = await get(repos._issuesUrl);
+    const repoList = await get(organization._reposUrl);
+    console.log(repoList);
+    const arrayOfFetchingIssue = repoList.map(
+      ({ has_issues, issues_url, html_url, name }) => {
+        if (has_issues) {
+          if (issues_url) {
+            return get(issues_url.split("{")[0]);
+          }
+        }
+      }
+    );
 
+    const issuesData = await Promise.all(arrayOfFetchingIssue);
+    console.log(issuesData);
     clearUi();
 
-    issues.forEach((issue) => {
+    issuesData.flat().forEach((issue) => {
       const card = htmlIssuesCard(issue);
       mainContainer.innerHTML += card;
     });
-    console.log(issues);
+    // console.log(issues);
   } catch (err) {
     clearUi();
     console.log("error", err);
