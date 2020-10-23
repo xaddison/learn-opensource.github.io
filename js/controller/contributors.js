@@ -1,4 +1,5 @@
 import { get } from "../constant.js";
+import { get_cached_data, update_cache_data, is_data_cached } from "../services/cache.js";
 
 const organization={
     _info: "https://api.github.com/orgs/learn-opensource",
@@ -38,8 +39,13 @@ const htmlContributorCard=(contributor) => {
 };
 
 const get_repo_contributors=async (contributors_url) => {
-    const contributors=await get(contributors_url);
-    return contributors;
+    if (is_data_cached(contributors_url)) {
+        return get_cached_data(contributors_url);
+    } else {
+        const contributors = await get(contributors_url);
+        update_cache_data(contributors_url, contributors);
+        return contributors;
+    }
 };
 
 const sum_contributor_contributions=async (repo, contributors) => {
@@ -50,8 +56,13 @@ const sum_contributor_contributions=async (repo, contributors) => {
 };
 
 const get_contributor_details=async (url) => {
-    const details=await get(url);
-    return details;
+    if (is_data_cached(url)) {
+        return get_cached_data(url);
+    } else {
+        const details = await get(url);
+        update_cache_data(url, details);
+        return details;
+    }
 };
 
 const get_sort_order=(contributors) => {
@@ -71,7 +82,14 @@ const build_contributor_cards=(contributors, sort_order) => {
 
 export const get_organization_contributors=async () => {
     let all_contributors_with_dups=[];
-    const repos=await get(organization._repos);
+    let repos;
+    
+    if (is_data_cached(organization._repos)) {
+        repos = get_cached_data(organization._repos);
+    } else {
+        repos = await get(organization._repos);
+        update_cache_data(organization._repos, repos);
+    }
 
     const map_repos=repos.map(async (repo) => {
         const contributors_with_sums=await sum_contributor_contributions(repo, all_contributors_with_dups);
