@@ -8,10 +8,10 @@ window.document.write(`
         <div class="py-5 bg-main text-center text-white">
             <!--main content of footer-->
             <p>
-                Made with <i class="fa fa-heart text-danger px-2"></i> by our
+                Home and Business made simple <i class="fa fa-heart text-danger px-2"></i> always thinking<BR>
                 <a href="https://github.com/learn-opensource" class="text-white text-decoration-none" target="_blank">
-                    team of contributors <i class=" px-2 fa fa-users text-white"></i>
-                </a>
+                    TalkRT available on Alexa.. Companion app available in the Apple Store and GooglePlay <i class=" px-2 fa fa-users text-white"></i>
+                </a> <BR><BR>TalkRT.com Copyright 2020 
             </p>
         </div>
     </footer>
